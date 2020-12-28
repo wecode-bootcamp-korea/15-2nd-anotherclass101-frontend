@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Detail = (props) => (
-      
-  );
+class Detail extends Component {
+  render() {
+    return <div></div>;
+  }
+}
 
 export default Detail;

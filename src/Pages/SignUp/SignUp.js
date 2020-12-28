@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const SignUp = (props) => (
-      
-  );
+class SignUp extends Component {
+  render() {
+    return <div></div>;
+  }
+}
 
 export default SignUp;

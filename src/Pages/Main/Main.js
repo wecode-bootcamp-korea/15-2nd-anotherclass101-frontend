@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ClassCard from './Components/ClassCard';
 
-const Main = (props) => (
-      
-  );
+class Main extends Component {
+  render() {
+    return (
+      <div>
+        <ClassCard />
+      </div>
+    );
+  }
+}
 
 export default Main;

@@ -1,0 +1,52 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/reset.scss';
+
+.classCard {
+  width: 276px;
+  .imgWrap {
+    position: relative;
+    width: 276px;
+    height: 206px;
+    overflow: hidden;
+    border-radius: 3px;
+    .fa-heart {
+      position: absolute;
+      z-index: 10;
+      color: #fff;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+    }
+    img {
+      width: 276px;
+      height: 207px;
+    }
+    img:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+  }
+
+  .txtWrap {
+    span {
+      display: inline-block;
+      margin-top: 4px;
+      vertical-align: middle;
+      font-size: 11px;
+      line-height: 16px;
+      color: rgb(27, 28, 25);
+      font-weight: 600;
+    }
+    p {
+      margin: 8px 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgb(27, 28, 29);
+    }
+    i {
+      font-size: 11px;
+      color: rgb(133, 138, 141);
+      margin-right: 8px;
+    }
+  }
+}

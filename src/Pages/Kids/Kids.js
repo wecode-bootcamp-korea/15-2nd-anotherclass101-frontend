@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Kids = (props) => (
-      
-  );
+class Kids extends Component {
+  render() {
+    return <div></div>;
+  }
+}
 
 export default Kids;

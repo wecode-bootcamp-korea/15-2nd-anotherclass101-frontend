@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Creator = (props) => (
-      
-  );
+class Creator extends Component {
+  render() {
+    return <div></div>;
+  }
+}
 
 export default Creator;

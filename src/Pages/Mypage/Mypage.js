@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Mypage = (props) => (
-      
-  );
+class Mypage extends Component {
+  render() {
+    return <div></div>;
+  }
+}
 
 export default Mypage;
