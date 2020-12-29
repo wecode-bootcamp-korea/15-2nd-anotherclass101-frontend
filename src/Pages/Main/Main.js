@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from "react";
 
-const Main = (props) => (
-      
-  );
+class Main extends Component {
+  render() {
+    return <div></div>;
+  }
+}
 
 export default Main;
