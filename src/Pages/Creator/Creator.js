@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const Creator = (props) => (
-      
-  );
+function mapStateToProps(state) {
+  return {};
+}
 
-export default Creator;
+class Creator extends Component {
+  render() {
+    return <div></div>;
+  }
+}
+
+export default connect(mapStateToProps)(Creator);

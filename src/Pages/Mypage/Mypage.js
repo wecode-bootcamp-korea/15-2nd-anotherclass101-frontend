@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const Mypage = (props) => (
-      
-  );
+function mapStateToProps(state) {
+  return {};
+}
 
-export default Mypage;
+class Mypage extends Component {
+  render() {
+    return <div></div>;
+  }
+}
+
+export default connect(mapStateToProps)(Mypage);

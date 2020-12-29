@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const Detail = (props) => (
-      
-  );
+function mapStateToProps(state) {
+  return {};
+}
 
-export default Detail;
+class Detail extends Component {
+  render() {
+    return <div></div>;
+  }
+}
+
+export default connect(mapStateToProps)(Detail);

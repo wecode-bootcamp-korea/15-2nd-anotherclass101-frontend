@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Main = (props) => (
-      
-  );
+const Main = props => <p>hello</p>;
 
 export default Main;
