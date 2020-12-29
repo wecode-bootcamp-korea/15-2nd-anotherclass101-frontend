@@ -3,11 +3,7 @@ import ClassCard from './Components/ClassCard';
 
 class Main extends Component {
   render() {
-    return (
-      <div>
-        <ClassCard />
-      </div>
-    );
+    return <ClassCard />;
   }
 }
 
