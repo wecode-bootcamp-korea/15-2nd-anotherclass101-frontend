@@ -8,6 +8,7 @@ import Creator from './Pages/Creator/Creator';
 import Auth from './Pages/Auth/Auth';
 import Detail from './Pages/Detail/Detail';
 import Kids from './Pages/Kids/Kids';
+import DetailMyPage from './Pages/Mypage/DetailMyPage';
 const Routes = () => {
   return (
     <Router>
@@ -19,6 +20,7 @@ const Routes = () => {
         <Route exact path="/Auth" component={Auth} />
         <Route exact path="/Detail" component={Detail} />
         <Route exact path="/Kids" component={Kids} />
+        <Route exact path="/Mypage/edit" component={DetailMyPage} />
       </Switch>
       <Footer />
     </Router>

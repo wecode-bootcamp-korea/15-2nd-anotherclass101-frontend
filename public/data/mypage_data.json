@@ -1,0 +1,94 @@
+{
+  "user": [
+    {
+      "points": "3500",
+      "grade": "Amateur",
+      "coupons": [
+        {
+          "couponTitle": "회원가입 축하",
+          "couponPrice": "3000"
+        },
+        {
+          "couponTitle": "랜덤 쿠폰",
+          "couponPrice": "2500"
+        },
+        {
+          "couponTitle": "랜덤 쿠폰",
+          "couponPrice": "2500"
+        }
+      ],
+      "list": [
+        {
+          "id": 1,
+          "image": "https://images.unsplash.com/photo-1527515545081-5db817172677?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+          "title": "[101페스트벌] 눈으로 먹고 맛보자!",
+          "section_title": "미술・소보루",
+          "heart": "8391",
+          "good": "96%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": true
+        },
+        {
+          "id": 2,
+          "image": "https://images.unsplash.com/photo-1470256699805-a29e1b58598a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+          "title": "[적극 추천] 맛있는 우동 만드는 방법",
+          "section_title": "쿠킹・노하우",
+          "heart": "1234",
+          "good": "96%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        },
+        {
+          "id": 3,
+          "image": "https://images.unsplash.com/photo-1572015653901-313e493edc82?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80",
+          "title": "[화제] 집을 빨리가는 촉지법 공유",
+          "section_title": "인생・꿀팁",
+          "heart": "34",
+          "good": "96%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        },
+        {
+          "id": 4,
+          "image": "https://images.unsplash.com/photo-1541173109020-9c5d8a48e169?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1599&q=80",
+          "title": "[커피] 스타벅스 저리가라 카페 창업",
+          "section_title": "노하우・창업",
+          "heart": "12",
+          "good": "36%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        },
+        {
+          "id": 5,
+          "image": "https://images.unsplash.com/photo-1587536848939-c7e58de4b792?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
+          "title": "[101페스트벌]눈으로 맛보는 디저트!",
+          "section_title": "미술・쿠킹",
+          "heart": "234",
+          "good": "93%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        }
+      ]
+    }
+  ]
+}

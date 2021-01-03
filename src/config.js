@@ -4,3 +4,6 @@ export const SIGNUP = `${API}/user/signup`;
 export const SEND_MSG = `${API}/user/sms`;
 export const CHECK_MSG = `${API}/user/sms_verification`;
 export const KAKAO_LOGIN = `${API}/user/kakao`;
+export const USER_PROFILE = `${API}/user/profiledata`;
+export const PROFILE_IMAGE = `${API}/user/profileimage`;
+export const PROFILE = `${API}/user/profile`;

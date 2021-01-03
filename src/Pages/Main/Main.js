@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Main = props => {
-  return <div></div>;
+  return <p>hello</p>;
 };
 
 export default Main;
