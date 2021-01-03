@@ -1,29 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const InputValidationMsg = React.memo(({ error, inputname }) => {
-  const { name, email, password, repassword, phonenumber } = error.errors;
-
-  const errorMessage = [
-    { Name: 'name', prposName: name },
-    { Name: 'email', prposName: email },
-    { Name: 'password', prposName: password },
-    { Name: 'repassword', prposName: repassword },
-    { Name: 'phonenumber', prposName: phonenumber },
-  ];
-  return (
-    <>
-      {errorMessage.map(list => {
-        return (
-          inputname === list.Name && (
-            <Message className={list.Name}>{list.prposName}</Message>
-          )
-        );
-      })}
-    </>
-  );
-});
-
+const InputValidationMsg = ({ inputs, type, inputname }) => {
+  return <>{inputname === type && <Message>{inputs}</Message>}</>;
+};
 export default InputValidationMsg;
 
 const Message = styled.p`

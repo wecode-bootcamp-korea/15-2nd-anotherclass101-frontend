@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { USER_PROFILE } from '../../config';
 
 const Nav = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [isNotionShow, setIsNotionShow] = useState(true);
+  const [userData, setUserData] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
-  let history = useHistory();
+  const history = useHistory();
+
+  useEffect(() => {
+    getUserData();
+  }, []);
+
+  const getUserData = () => {
+    fetch(USER_PROFILE, {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(res => {
+        setUserData(res);
+        setIsLoading(false);
+      });
+  };
+
+  const goToLogin = () => {
+    history.push('/auth');
+  };
+
   const goToCreator = () => {
     history.push('/Creator/Creator');
   };
@@ -21,44 +44,52 @@ const Nav = () => {
         <Conbox>
           <p>지금 크리에이터 도전하고 100만원 지원금 받으세요</p>
           <button onClick={() => setIsNotionShow(false)}>
-            <i class="fas fa-times" />
+            <i className="fas fa-times" />
           </button>
         </Conbox>
       </Notion>
       <Navbar>
         <Conbox>
           <div>
-            <img src="images/logo.png" alt="로고" />
+            <img src="/images/logo.png" alt="로고" />
             <InputBox>
               <input type="text" placeholder="배우고 싶은 것이 있나요?" />
-              <i class="fas fa-search" />
+              <i className="fas fa-search" />
             </InputBox>
           </div>
-          <MenuNavBar>
-            <li onClick={goToCreator}>크리에이터 센터</li>
-            <li>주문 및 배송</li>
-            <li>내 쿠폰</li>
-            <li>보상바구니</li>
-            <li>내 클래스</li>
-            <li onClick={() => setIsModalActive(!isModalActive)}>
-              <img src="images/orange.png" alt="오렌지" />
-              <i class="fas fa-chevron-down" />
-            </li>
-            <NavModalbox isModalActive={isModalActive}>
-              <div className="myPage ">
-                <img src="images/orange.png" alt="마이페이지" />
-                <p>
-                  한민아
-                  <br />
-                  <span onClick={goToMyPage}>
-                    마이페이지 <i class="fas fa-chevron-right" />
-                  </span>
-                </p>
-              </div>
-              <p>내 응원 클래스</p>
-              <p>로그아웃</p>
-            </NavModalbox>
-          </MenuNavBar>
+          {sessionStorage.length === 0 ? (
+            <p onClick={goToLogin}>로그인</p>
+          ) : (
+            <MenuNavBar>
+              <li>크리에이터 쿠폰</li>
+              <li>주문 및 배송</li>
+              <li>내 쿠폰</li>
+              <li>보상바구니</li>
+              <li>내 클래스</li>
+              <li onClick={() => setIsModalActive(!isModalActive)}>
+                {isLoading ? (
+                  <img src="images/orange.png" alt="오렌지" />
+                ) : (
+                  <img src={userData.image} alt="프로필" />
+                )}
+                <i className="fas fa-chevron-down" />
+              </li>
+              <NavModalbox isModalActive={isModalActive}>
+                <div className="myPage ">
+                  {isLoading ? '' : <img src={userData.image} alt="오렌지" />}
+                  <p>
+                    한민아
+                    <br />
+                    <span>
+                      마이페이지 <i className="fas fa-chevron-right" />
+                    </span>
+                  </p>
+                </div>
+                <p>내 응원 클래스</p>
+                <p>로그아웃</p>
+              </NavModalbox>
+            </MenuNavBar>
+          )}
         </Conbox>
       </Navbar>
     </>
