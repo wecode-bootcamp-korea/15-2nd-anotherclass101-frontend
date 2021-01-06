@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Mypage = (props) => (
-      
-  );
+const Mypage = props => {};
 
 export default Mypage;

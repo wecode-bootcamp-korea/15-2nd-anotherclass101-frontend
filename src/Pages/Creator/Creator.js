@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Creator = (props) => (
-      
-  );
+const Creator = props => {};
 
 export default Creator;

@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 const theme = {
-  black: "#222",
+  black: '#222',
 };
 export const displayCenter = css`
   display: flex;

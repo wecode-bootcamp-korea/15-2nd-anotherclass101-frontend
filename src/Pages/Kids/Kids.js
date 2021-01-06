@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Kids = (props) => (
-      
-  );
+const Kids = props => {};
 
 export default Kids;
