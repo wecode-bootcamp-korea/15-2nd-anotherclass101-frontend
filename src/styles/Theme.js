@@ -5,7 +5,6 @@ export const centerLine = css`
   height: inherit;
   margin: auto;
 `;
-
 const displayCenter = css`
   display: flex;
   justify-content: center;
@@ -18,7 +17,6 @@ export const BgImg = css`
   background-size: cover;
   background-position: center;
 `;
-
 const displayColumnAndStart = css`
   display: flex;
   flex-direction: column;
