@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Auth extends Component {
-  render() {
-    return <div></div>;
-  }
-}
+const Auth = props => {
+  return <div></div>;
+};
 
 export default Auth;
