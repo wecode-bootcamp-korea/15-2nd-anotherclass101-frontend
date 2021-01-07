@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [isNotionShow, setIsNotionShow] = useState(true);
+
+  let history = useHistory();
+  const goToCreator = () => {
+    history.push('/Creator/Creator');
+  };
+
+  const goToMyPage = () => {
+    history.push('/Mypage/Mypage');
+  };
 
   return (
     <>
@@ -25,7 +35,7 @@ const Nav = () => {
             </InputBox>
           </div>
           <MenuNavBar>
-            <li>크리에이터 쿠폰</li>
+            <li onClick={goToCreator}>크리에이터 센터</li>
             <li>주문 및 배송</li>
             <li>내 쿠폰</li>
             <li>보상바구니</li>
@@ -40,7 +50,7 @@ const Nav = () => {
                 <p>
                   한민아
                   <br />
-                  <span>
+                  <span onClick={goToMyPage}>
                     마이페이지 <i class="fas fa-chevron-right" />
                   </span>
                 </p>
@@ -163,6 +173,7 @@ const NavModalbox = styled.div`
   .myPage {
     border-bottom: 1px solid #ccc;
     margin-bottom: 22px;
+
     p {
       display: inline-block;
       line-height: 20px;
@@ -172,10 +183,12 @@ const NavModalbox = styled.div`
         margin-bottom: 22px;
         font-size: 11px;
         color: rgb(253, 126, 20);
+        cursor: pointer;
       }
     }
   }
   p {
     line-height: 33px;
+    cursor: pointer;
   }
 `;
