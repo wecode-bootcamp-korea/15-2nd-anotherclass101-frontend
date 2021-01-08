@@ -1,10 +1,36 @@
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
+
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { USER_PROFILE } from '../../config';
 
 const Nav = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [isNotionShow, setIsNotionShow] = useState(true);
+  const [userData, setUserData] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
+  const history = useHistory();
+
+  useEffect(() => {
+    getUserData();
+  }, []);
+
+  const getUserData = () => {
+    fetch(USER_PROFILE, {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(res => {
+        setUserData(res);
+        setIsLoading(false);
+      });
+  };
+
+  const goToLogin = () => {
+    history.push('/auth');
+  };
 
   let history = useHistory();
   const LOGIN = localStorage.getItem('token');
@@ -46,12 +72,15 @@ const Nav = () => {
       <Navbar>
         <Conbox>
           <div>
-            <img src="images/logo.png" alt="로고" onClick={goMain} />
+
+            <img src="/images/logo.png" alt="로고" onClick={goMain} />
+
             <InputBox>
               <input type="text" placeholder="배우고 싶은 것이 있나요?" />
               <i className="fas fa-search" />
             </InputBox>
           </div>
+
           <MenuNavBar>
             <li onClick={goToCreator}>크리에이터 센터</li>
             <li onClick={goToLogin}>로그인</li>
@@ -84,6 +113,10 @@ const Nav = () => {
               <p onClick={Logout}>로그아웃</p>
             </NavModalbox>
           </MenuNavBar>
+
+          
+          )}
+
         </Conbox>
       </Navbar>
     </>
