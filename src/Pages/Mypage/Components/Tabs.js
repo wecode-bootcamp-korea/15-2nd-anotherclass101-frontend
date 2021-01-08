@@ -21,9 +21,9 @@ const Tabs = () => {
     <>
       {infoTabs.map((el, idx) =>
         el.title === '내 포인트' ? (
-          <Wrapper>
-            <Tab key={idx}>{el.title}</Tab>
-            <UserPount>0P</UserPount>
+          <Wrapper key={`Wrapper ${idx}`}>
+            <Tab key={`Tab ${idx}`}>{el.title}</Tab>
+            <UserPoint key={`UserPoint ${idx}`}>0P</UserPoint>
           </Wrapper>
         ) : (
           <>
@@ -58,6 +58,6 @@ const Wrapper = styled.div`
   margin-bottom: 15px;
 `;
 
-const UserPount = styled.p`
+const UserPoint = styled.p`
   font-size: 14px;
 `;

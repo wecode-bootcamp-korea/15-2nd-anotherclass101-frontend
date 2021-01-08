@@ -85,7 +85,6 @@ const InputAndLabel = React.memo(({ format, inputs, setInputs }) => {
         if (res.message === 'INVALID_NUMBER') {
           cogoToast.success('인증번호가 틀렸습니다.');
         } 
-        
         return cogoToast.success('다시 한번 확인해주세요');
         
       })

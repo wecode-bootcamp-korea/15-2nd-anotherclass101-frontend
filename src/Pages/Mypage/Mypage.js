@@ -42,10 +42,15 @@ const Mypage = props => {
 
   const handleLikeBtn = event => {
     userInfo.list.map(el => {
-      !el.like ? el.like = true : el.like = false;
-      })
+      if (el.id === Number(event.target.id)) {
+        if (!el.like) {
+          el.like = true;
+        } else {
+          el.like = false;
+        }
+      }
       return setUserInfo({ ...userInfo });
-    };
+    });
   };
 
   return (
@@ -69,6 +74,7 @@ const Mypage = props => {
       )}
     </>
   );
+};
 export default Mypage;
 
 const MypageContainer = styled.main`

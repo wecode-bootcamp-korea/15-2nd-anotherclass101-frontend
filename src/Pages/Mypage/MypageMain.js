@@ -5,24 +5,24 @@ import Card from './Components/Card';
 
 const MypageMain = ({ userInfo, userLike, handleLikeBtn }) => {
   return (
-      <Main>
-        <MainHeader>
-          <Title title={'내가 본 클래스'} />
-        </MainHeader>
-        <div>
-          <CardList>
-            <Card userInfo={userInfo} handleLikeBtn={handleLikeBtn} />
-          </CardList>
-        </div>
-        <MainHeader>
-          <Title title={'내가 찜한 클래스'} />
-        </MainHeader>
-        <div>
-          <CardList>
-            <Card userInfo={userLike} handleLikeBtn={handleLikeBtn} />
-          </CardList>
-        </div>
-      </Main>
+    <Main>
+      <MainHeader>
+        <Title title={'내가 본 클래스'} />
+      </MainHeader>
+      <div>
+        <CardList>
+          <Card userInfo={userInfo} handleLikeBtn={handleLikeBtn} />
+        </CardList>
+      </div>
+      <MainHeader>
+        <Title title={'내가 찜한 클래스'} />
+      </MainHeader>
+      <div>
+        <CardList>
+          <Card userInfo={userLike} handleLikeBtn={handleLikeBtn} />
+        </CardList>
+      </div>
+    </Main>
   );
 };
 

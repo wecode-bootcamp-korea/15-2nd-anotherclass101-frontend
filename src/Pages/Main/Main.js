@@ -229,9 +229,6 @@ const Main = () => {
     </div>
   );
 
-
-export default Main;
-
 const Menu = styled.div`
   padding: 14px 0;
   width: 100%;
