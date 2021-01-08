@@ -1,0 +1,23 @@
+{
+  "Title": {
+    "img": "https://cdn.class101.net/images/59adb50c-904e-42b0-9522-65b77ff2b4e6/2880xauto.webp",
+    "title": "WELCOME엔원 투엘엘 위빙의 ‘도형 위빙’ 클래스를 소개합니다",
+    "welcome": [
+      {
+        "number": "1",
+        "txt": "안녕하세요! '엔원 투엘엘 위빙' 입니다",
+        "free": true
+      },
+      {
+        "number": "2",
+        "txt": "태피스트리 위빙이 뭔가요?",
+        "free": true
+      },
+      {
+        "number": "3",
+        "txt": "준비물을 알아볼까요?",
+        "free": true
+      }
+    ]
+  }
+}

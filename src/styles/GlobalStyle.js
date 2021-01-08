@@ -26,6 +26,7 @@ button {
     border-style: none;
     cursor: pointer;
   }
+
 `;
 
 export default GlobalStyles;

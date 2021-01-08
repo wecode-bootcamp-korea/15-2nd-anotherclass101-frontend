@@ -1,20 +1,8 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-
 const Nav = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [isNotionShow, setIsNotionShow] = useState(true);
-
-  let history = useHistory();
-  const goToCreator = () => {
-    history.push('/Creator/Creator');
-  };
-
-  const goToMyPage = () => {
-    history.push('/Mypage/Mypage');
-  };
-
   return (
     <>
       <Notion isNotionShow={isNotionShow}>
@@ -35,7 +23,7 @@ const Nav = () => {
             </InputBox>
           </div>
           <MenuNavBar>
-            <li onClick={goToCreator}>크리에이터 센터</li>
+            <li>크리에이터 쿠폰</li>
             <li>주문 및 배송</li>
             <li>내 쿠폰</li>
             <li>보상바구니</li>
@@ -50,7 +38,7 @@ const Nav = () => {
                 <p>
                   한민아
                   <br />
-                  <span onClick={goToMyPage}>
+                  <span>
                     마이페이지 <i class="fas fa-chevron-right" />
                   </span>
                 </p>
@@ -64,9 +52,7 @@ const Nav = () => {
     </>
   );
 };
-
 export default Nav;
-
 const Notion = styled.div`
   display: ${props => (props.isNotionShow ? 'block' : 'none')};
   width: 100%;
@@ -84,31 +70,26 @@ const Notion = styled.div`
     color: white;
   }
 `;
-
 const Conbox = styled.div`
   width: 1176px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   img {
     width: 138px;
   }
 `;
-
 const Navbar = styled.div`
   padding: 14px 0;
   width: 100%;
   background: white;
 `;
-
 const InputBox = styled.div`
   position: relative;
   display: inline-block;
   vertical-align: top;
   margin-left: 32px;
-
   input {
     padding: 1px 44px 1px 16px;
     width: 380px;
@@ -117,26 +98,22 @@ const InputBox = styled.div`
     box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
     border-radius: 3px;
   }
-
   i {
     position: absolute;
     top: 10px;
     right: 14px;
   }
 `;
-
 const MenuNavBar = styled.ul`
   position: relative;
   display: flex;
   align-items: center;
-
   li {
     float: left;
     margin-left: 24px;
     font-size: 14px;
     color: rgb(27, 28, 29);
     cursor: pointer;
-
     img {
       width: 35px;
       height: 35px;
@@ -144,13 +121,11 @@ const MenuNavBar = styled.ul`
       vertical-align: middle;
       margin-right: 3px;
     }
-
     i {
       font-size: 10px;
     }
   }
 `;
-
 const NavModalbox = styled.div`
   display: ${props => (props.isModalActive ? 'block' : 'none')};
   position: absolute;
@@ -164,7 +139,6 @@ const NavModalbox = styled.div`
   border-radius: 3px;
   background: white;
   z-index: 10;
-
   img {
     width: 35px;
     height: 35px;
