@@ -39,7 +39,7 @@ const LoginPage = ({ signInProps, signUpProps, loginKakao }) => {
     const { email: errorEmail, password: errorPassword } = inputs.errors;
     if (email === '' || password === '') {
       cogoToast.error('모든 항목을 채워주세요');
-    } else if (errorEmail !== '' || errorPassword !== '') {
+    } else if (errorEmail === true || errorPassword === true) {
       cogoToast.error('형식을 갖춰서 입력해주세요');
     } else {
       fetch(SIGNIN, {
@@ -51,7 +51,6 @@ const LoginPage = ({ signInProps, signUpProps, loginKakao }) => {
       })
         .then(res => res.json())
         .then(res => {
-          console.log(res);
           if (res.message === 'INVALID_EMAIL') {
             cogoToast.error('이메일을 다시 확인해주세요.');
           } else if (res.message === 'INVALID_PASSWORD') {
@@ -86,11 +85,11 @@ const LoginPage = ({ signInProps, signUpProps, loginKakao }) => {
     ) {
       cogoToast.error('모든 항목을 채워주세요');
     } else if (
-      errorName !== '' ||
-      errorEmail !== '' ||
-      errorPassword !== '' ||
-      errorRePassword !== '' ||
-      errorPhoneNumber !== ''
+      errorName === true ||
+      errorEmail === true ||
+      errorPassword === true ||
+      errorRePassword === true ||
+      errorPhoneNumber === true
     ) {
       cogoToast.error('형식을 갖춰서 입력해주세요');
     } else {

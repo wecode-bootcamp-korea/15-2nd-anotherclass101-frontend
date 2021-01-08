@@ -1,0 +1,92 @@
+{
+  "user": [
+    {
+      "list": [
+        {
+          "id": 1,
+          "image": "https://images.unsplash.com/photo-1504465188792-96c4e8752e8e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
+          "title": "[101페스트벌] 집에서 즐기는 홈카페",
+          "section_title": "취미・카페",
+          "heart": "8391",
+          "good": "85%",
+          "total_value": "35,000",
+          "discount_percent": 28,
+          "value": "3,324",
+          "month": "3개월",
+          "totla_like": 42,
+          "like": true
+        },
+        {
+          "id": 2,
+          "image": "https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+          "title": "하버드 가는 비법",
+          "section_title": "꿀팁・공부",
+          "heart": "132",
+          "good": "83%",
+          "total_value": "35,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "2개월",
+          "totla_like": 326,
+          "like": true
+        },
+        {
+          "id": 3,
+          "image": "https://images.unsplash.com/photo-1538460120076-604b93a2ce88?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1540&q=80",
+          "title": "[힐링] 마음의 여유를 찾는 방법",
+          "section_title": "인생・힐링",
+          "heart": "34",
+          "good": "96%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        },
+        {
+          "id": 4,
+          "image": "https://images.unsplash.com/photo-1549872178-96db16a53ca8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+          "title": "[여행의 왕] 태국 여행 꿀팁 공유",
+          "section_title": "행복・여행",
+          "heart": "12",
+          "good": "36%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": true
+        },
+        {
+          "id": 5,
+          "image": "https://images.unsplash.com/photo-1587536848939-c7e58de4b792?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
+          "title": "[101페스트벌]눈으로 맛보는 디저트!",
+          "section_title": "미술・쿠킹",
+          "heart": "234",
+          "good": "93%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        },
+        {
+          "id": 6,
+          "image": "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2733&q=80",
+          "title": "[메이크업]엄마도 못알아보는 화장법",
+          "section_title": "미술・메이크업",
+          "heart": "234",
+          "good": "93%",
+          "total_value": "352,000",
+          "discount_percent": 48,
+          "value": "36.324",
+          "month": "5개월",
+          "totla_like": 96,
+          "like": false
+        }
+      ]
+    }
+  ]
+}
