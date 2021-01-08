@@ -81,12 +81,12 @@ const InputAndLabel = React.memo(({ format, inputs, setInputs }) => {
         if (res.message === 'SUCCESS') {
           cogoToast.success('인증이 완료되었습니다.');
           setCheckAuthNum(!checkAuthNum);
-        }
+        } 
         if (res.message === 'INVALID_NUMBER') {
           cogoToast.success('인증번호가 틀렸습니다.');
-        }
-
+        } 
         return cogoToast.success('다시 한번 확인해주세요');
+        
       })
       .catch(error => console.log(`인증번호 에러 ${error}`));
   };
