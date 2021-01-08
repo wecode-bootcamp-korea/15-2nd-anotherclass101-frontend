@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
+
 import React, { useEffect, useState } from 'react';
->>>>>>> 4b6cbba... Modify : 마이페이지 완성
+
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { USER_PROFILE } from '../../config';
@@ -35,14 +33,32 @@ const Nav = () => {
   };
 
   let history = useHistory();
+  const LOGIN = localStorage.getItem('token');
+
   const goToCreator = () => {
-    history.push('/Creator/Creator');
+    if (localStorage.getItem('token')) {
+      history.push('/Creator');
+    } else {
+      alert('로그인 후 가능한 서비스 입니다');
+      history.push('/Auth');
+    }
   };
 
   const goToMyPage = () => {
-    history.push('/Mypage/Mypage');
+    history.push('/Mypage');
   };
 
+  const goToLogin = () => {
+    history.push('/Auth');
+  };
+
+  const Logout = () => {
+    localStorage.removeItem('token');
+  };
+
+  const goMain = () => {
+    history.push('/Main');
+  };
   return (
     <>
       <Notion isNotionShow={isNotionShow}>
@@ -56,45 +72,51 @@ const Nav = () => {
       <Navbar>
         <Conbox>
           <div>
-            <img src="/images/logo.png" alt="로고" />
+
+            <img src="/images/logo.png" alt="로고" onClick={goMain} />
+
             <InputBox>
               <input type="text" placeholder="배우고 싶은 것이 있나요?" />
               <i className="fas fa-search" />
             </InputBox>
           </div>
-          {sessionStorage.length === 0 ? (
-            <p onClick={goToLogin}>로그인</p>
-          ) : (
-            <MenuNavBar>
-              <li>크리에이터 쿠폰</li>
-              <li>주문 및 배송</li>
-              <li>내 쿠폰</li>
-              <li>보상바구니</li>
-              <li>내 클래스</li>
+
+          <MenuNavBar>
+            <li onClick={goToCreator}>크리에이터 센터</li>
+            <li onClick={goToLogin}>로그인</li>
+            {LOGIN && (
+              <span>
+                <li>주문 및 배송</li>
+                <li>내 쿠폰</li>
+                <li>보상바구니</li>
+                <li>내 클래스</li>
+              </span>
+            )}
+            {LOGIN && (
               <li onClick={() => setIsModalActive(!isModalActive)}>
-                {isLoading ? (
-                  <img src="images/orange.png" alt="오렌지" />
-                ) : (
-                  <img src={userData.image} alt="프로필" />
-                )}
-                <i className="fas fa-chevron-down" />
+                <img src="images/orange.png" alt="오렌지" />
+                <i class="fas fa-chevron-down" />
               </li>
-              <NavModalbox isModalActive={isModalActive}>
-                <div className="myPage ">
-                  {isLoading ? '' : <img src={userData.image} alt="오렌지" />}
-                  <p>
-                    한민아
-                    <br />
-                    <span>
-                      마이페이지 <i className="fas fa-chevron-right" />
-                    </span>
-                  </p>
-                </div>
-                <p>내 응원 클래스</p>
-                <p>로그아웃</p>
-              </NavModalbox>
-            </MenuNavBar>
+            )}
+            <NavModalbox isModalActive={isModalActive}>
+              <div className="myPage ">
+                <img src="images/orange.png" alt="마이페이지" />
+                <p>
+                  한민아
+                  <br />
+                  <span onClick={goToMyPage}>
+                    마이페이지 <i className="fas fa-chevron-right" />
+                  </span>
+                </p>
+              </div>
+              <p>내 응원 클래스</p>
+              <p onClick={Logout}>로그아웃</p>
+            </NavModalbox>
+          </MenuNavBar>
+
+          
           )}
+
         </Conbox>
       </Navbar>
     </>
@@ -130,6 +152,7 @@ const Conbox = styled.div`
 
   img {
     width: 138px;
+    cursor: pointer;
   }
 `;
 
@@ -214,6 +237,7 @@ const NavModalbox = styled.div`
       display: inline-block;
       line-height: 20px;
       vertical-align: top;
+      cursor: pointer;
       span {
         display: inline-block;
         margin-bottom: 22px;
