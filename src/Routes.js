@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
 import Main from './Pages/Main/Main';
 import Mypage from './Pages/Mypage/Mypage';
-import Creator from './Pages/Creator/Creator';
+import Creator from './Pages/Creator';
 import Auth from './Pages/Auth/Auth';
 import Detail from './Pages/Detail/Detail';
 import Kids from './Pages/Kids/Kids';
