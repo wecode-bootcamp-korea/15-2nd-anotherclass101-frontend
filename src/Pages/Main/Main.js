@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme, { Theme } from './../../styles/Theme';
 import ClassCard from './Component/ClassCard';
 
+
 const Main = () => {
   // 데이터 가져오기
   const [MainNavList, setTopNavList] = useState([]);
@@ -227,7 +228,7 @@ const Main = () => {
       </Section>
     </div>
   );
-};
+
 
 export default Main;
 

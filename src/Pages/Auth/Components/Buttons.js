@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaCalendar } from 'react-icons/fa';
+import { RiKakaoTalkFill } from 'react-icons/ri';
 
 const Buttons = ({ format, onClick }) => {
   const buttonGroup =
@@ -12,7 +12,7 @@ const Buttons = ({ format, onClick }) => {
 
   return (
     <Kakao onClick={onClick}>
-      <FaCalendar />
+      <RiKakaoTalkFill />
       &nbsp;&nbsp;카카오로 3초 만에 시작하기
     </Kakao>
   );
@@ -23,7 +23,7 @@ export default Buttons;
 const Button = styled.button`
   width: 100%;
   height: 45px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   border-radius: 5px;
   font-weight: bold;
   background-color: #f77804;
