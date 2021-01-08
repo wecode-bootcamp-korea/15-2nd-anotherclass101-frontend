@@ -1,22 +1,16 @@
-
 import React, { useEffect, useState } from 'react';
-
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { USER_PROFILE } from '../../config';
-
 const Nav = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [isNotionShow, setIsNotionShow] = useState(true);
   const [userData, setUserData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
   const history = useHistory();
-
   useEffect(() => {
     getUserData();
   }, []);
-
   const getUserData = () => {
     fetch(USER_PROFILE, {
       method: 'GET',
@@ -27,14 +21,7 @@ const Nav = () => {
         setIsLoading(false);
       });
   };
-
-  const goToLogin = () => {
-    history.push('/auth');
-  };
-
-  let history = useHistory();
   const LOGIN = localStorage.getItem('token');
-
   const goToCreator = () => {
     if (localStorage.getItem('token')) {
       history.push('/Creator');
@@ -43,19 +30,15 @@ const Nav = () => {
       history.push('/Auth');
     }
   };
-
   const goToMyPage = () => {
     history.push('/Mypage');
   };
-
   const goToLogin = () => {
     history.push('/Auth');
   };
-
   const Logout = () => {
     localStorage.removeItem('token');
   };
-
   const goMain = () => {
     history.push('/Main');
   };
@@ -72,15 +55,12 @@ const Nav = () => {
       <Navbar>
         <Conbox>
           <div>
-
             <img src="/images/logo.png" alt="로고" onClick={goMain} />
-
             <InputBox>
               <input type="text" placeholder="배우고 싶은 것이 있나요?" />
               <i className="fas fa-search" />
             </InputBox>
           </div>
-
           <MenuNavBar>
             <li onClick={goToCreator}>크리에이터 센터</li>
             <li onClick={goToLogin}>로그인</li>
@@ -100,7 +80,7 @@ const Nav = () => {
             )}
             <NavModalbox isModalActive={isModalActive}>
               <div className="myPage ">
-                <img src="images/orange.png" alt="마이페이지" />
+                <img src="/images/orange.png" alt="마이페이지" />
                 <p>
                   한민아
                   <br />
@@ -113,18 +93,13 @@ const Nav = () => {
               <p onClick={Logout}>로그아웃</p>
             </NavModalbox>
           </MenuNavBar>
-
-          
           )}
-
         </Conbox>
       </Navbar>
     </>
   );
 };
-
 export default Nav;
-
 const Notion = styled.div`
   display: ${props => (props.isNotionShow ? 'block' : 'none')};
   width: 100%;
@@ -142,32 +117,27 @@ const Notion = styled.div`
     color: white;
   }
 `;
-
 const Conbox = styled.div`
   width: 1176px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   img {
     width: 138px;
     cursor: pointer;
   }
 `;
-
 const Navbar = styled.div`
   padding: 14px 0;
   width: 100%;
   background: white;
 `;
-
 const InputBox = styled.div`
   position: relative;
   display: inline-block;
   vertical-align: top;
   margin-left: 32px;
-
   input {
     padding: 1px 44px 1px 16px;
     width: 380px;
@@ -176,26 +146,22 @@ const InputBox = styled.div`
     box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
     border-radius: 3px;
   }
-
   i {
     position: absolute;
     top: 10px;
     right: 14px;
   }
 `;
-
 const MenuNavBar = styled.ul`
   position: relative;
   display: flex;
   align-items: center;
-
   li {
     float: left;
     margin-left: 24px;
     font-size: 14px;
     color: rgb(27, 28, 29);
     cursor: pointer;
-
     img {
       width: 35px;
       height: 35px;
@@ -203,13 +169,11 @@ const MenuNavBar = styled.ul`
       vertical-align: middle;
       margin-right: 3px;
     }
-
     i {
       font-size: 10px;
     }
   }
 `;
-
 const NavModalbox = styled.div`
   display: ${props => (props.isModalActive ? 'block' : 'none')};
   position: absolute;
@@ -223,7 +187,6 @@ const NavModalbox = styled.div`
   border-radius: 3px;
   background: white;
   z-index: 10;
-
   img {
     width: 35px;
     height: 35px;
@@ -232,7 +195,6 @@ const NavModalbox = styled.div`
   .myPage {
     border-bottom: 1px solid #ccc;
     margin-bottom: 22px;
-
     p {
       display: inline-block;
       line-height: 20px;
