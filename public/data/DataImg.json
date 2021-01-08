@@ -1,0 +1,36 @@
+{
+  "DataImg": [
+    {
+      "id": 1,
+      "url": "https://class101.net/images/cover-01.jpg",
+      "title": "예시이미지1"
+    },
+    {
+      "id": 2,
+      "url": "https://class101.net/images/cover-02.jpg",
+      "title": "예시이미지2"
+    },
+    {
+      "id": 3,
+      "url": "https://class101.net/images/cover-03.jpg",
+      "title": "예시이미지3"
+    }
+  ],
+  "ThumbnailImg": [
+    {
+      "id": 1,
+      "url": "https://class101.net/images/cover-04.jpg",
+      "title": "예시이미지1"
+    },
+    {
+      "id": 2,
+      "url": "https://class101.net/images/cover-05.jpg",
+      "title": "예시이미지2"
+    },
+    {
+      "id": 3,
+      "url": "https://class101.net/images/cover-06.jpg",
+      "title": "예시이미지3"
+    }
+  ]
+}
